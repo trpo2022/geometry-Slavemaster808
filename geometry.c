@@ -28,7 +28,7 @@ int main(void)
         }
         if (str[i] == ch1[i]) {
             n++;
-            tt name[i] = str[i];
+            name[i] = str[i];
         }
         k = i + 2;
     }
