@@ -9,8 +9,8 @@ typedef struct Coord {
 
 int main(void)
 {
-    char ch1[] = "Circle\0";
-    char ch2[] = "(, , )\0";
+    char ch1[] = "circle\0";
+    char ch2[] = "( , )\0";
     char str[MAX];
     char name[10];
     co coordin[10];
@@ -22,9 +22,10 @@ int main(void)
     fgets(str, MAX - 1, stdin);
 
     for (int i = 0; ch1[i] != '\0'; i++) {
-        if (islower(str[0])) {
-            puts("1st letter must be in upper case.\n");
-            break;
+        if (isupper(str[i])) {
+	    str[i] = tolower(str[i]);
+            //puts("1st letter must be in upper case.\n");
+            //break;
         }
         if (str[i] == ch1[i]) {
             n++;
@@ -32,6 +33,7 @@ int main(void)
         }
         k = i + 2;
     }
+    name[0] = toupper(name[0]);
 
     int c = 0;
     if (n != strlen(ch1)) {
@@ -48,20 +50,23 @@ int main(void)
         if (c != 0)
             break;
 
-        if (str[i] == ' ') {
+        if (str[i] == ',') {
             n++;
+	    comm++;
+	    //m++;
             continue;
         }
 
         if (str[i] == '.' || isdigit(str[i])) {
             coordin[m].coor[j] = str[i];
             j++;
-        } else if (str[i] == ',') {
+        } else if (str[i] == ' ') {
             m++;
             n++;
-            comm++;
+            //comm++;
             j = 0;
-        } else {
+        }
+	 else {
             puts("Check input data or commas.\n");
             break;
         }
@@ -69,7 +74,7 @@ int main(void)
     // printf("%d", n);
     int l = 0;
     while (l < 3) {
-        if (comm < 2) {
+        if (comm < 1) {
             puts("Too few args, try again.\n");
             break;
         }
