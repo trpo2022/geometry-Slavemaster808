@@ -1,6 +1,9 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
+#include "geometry.h"
+#include "funcs.c"
 #define MAX 201
 
 typedef struct Coord {
