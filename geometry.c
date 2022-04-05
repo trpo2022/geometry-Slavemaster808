@@ -2,11 +2,19 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <math.h>
+#include "geometry.h"
 #define MAX 201
 
 typedef struct Coord {
     char coor[30];
 } co;
+
+float dotnum(char *c){
+	double a = atof(c);
+	float b = (float)a;
+return b;
+}
 
 int main(void)
 {
@@ -89,5 +97,11 @@ int main(void)
         printf("Radius: %s\n", coordin[2].coor);
         l++;
     }
+
+	float cord1 = dotnum(coordin[0].coor);
+	float cord2 = dotnum(coordin[1].coor);
+	float cord3 = dotnum(coordin[2].coor);
+
+	per_area(cord3);
     return 0;
 }
