@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-#include "geometry.h"
+#include "lib.h"
 #include "funcs.c"
 #define MAX 201
 
@@ -91,5 +91,8 @@ int main(void)
         printf("Radius: %s\n", coordin[2].coor);
         l++;
     }
+
+	float cord3 = dotnum(coordin[2].coor);
+	per_area(cord3);
     return 0;
 }
