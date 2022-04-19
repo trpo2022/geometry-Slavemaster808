@@ -1,4 +1,4 @@
-#include "geometry.h"
+#include <libgeom/geom.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

@@ -3,8 +3,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
-#include "geometry.h"
-#include "funcs.c"
+#include <libgeom/geom.h>
+//#include "funcs.c"
 #define MAX 201
 
 typedef struct Coord {
@@ -25,7 +25,7 @@ int main(void)
     char name[10];
     co coordin[10];
 
-    int n = 0;
+    unsigned int n = 0;
     int k = 0;
 
     puts("Enter string:\n");
@@ -104,5 +104,7 @@ int main(void)
 	float cord3 = dotnum(coordin[2].coor);
 
 	per_area(cord3);
+
+	printf("\n%f\n%f\n%s\n", cord1, cord2, ch2);
     return 0;
 }
