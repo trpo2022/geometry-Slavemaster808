@@ -4,7 +4,7 @@ TEST_NAME = test
 DEBUG =
 
 CFLAGS = -Wall -Wextra -Werror
-CPPFLAGS = -I src -I thirdparty -MP -MMD
+CPPFLAGS = -I src -I party -MP -MMD
 
 BIN_DIR = bin
 OBJ_DIR = obj
