@@ -4,12 +4,17 @@
 #include <stdlib.h>
 #include <math.h>
 #include <libgeom/geom.h>
-//#include "funcs.c"
-#define MAX 201
+//#define MAX 201
 
-typedef struct Coord {
+/*typedef struct Coord {
     char coor[30];
-} co;
+} co; */
+
+int main()
+{
+    manysircles();
+    return 0;
+}
 
 //float dotnum(char *c){
 //	double a = atof(c);
@@ -17,7 +22,7 @@ typedef struct Coord {
 //return b;
 //}
 
-int main(void)
+/*int main(void)
 {
     char ch1[] = "circle\0";
     char ch2[] = "( , )\0";
@@ -108,3 +113,4 @@ int main(void)
 	printf("\n%f\n%f\n%s\n", cord1, cord2, ch2);
     return 0;
 }
+*/
