@@ -1,4 +1,4 @@
-#include <geometrylib/geomfunc.h>
+#include <libgeom/geom.h>
 #include <ctest.h>
 
 CTEST(ctest, test_close_bracket)
