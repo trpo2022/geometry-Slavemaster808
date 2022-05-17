@@ -1,0 +1,6 @@
+*.a
+*.d
+*.o
+bin/geometry
+bin/geom
+bin/test
